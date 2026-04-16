@@ -611,7 +611,7 @@ async function exitSuccess(args: {
     )
   }
   summary.push('</table>')
-  const skipSummary = core.getBooleanInput("skip_summary")
+  const skipSummary = core.getBooleanInput('skip_summary')
   if (!skipSummary) {
     await core.summary.addRaw(summary.join('')).write()
   }
